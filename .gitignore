@@ -1,6 +1,6 @@
-/target
+/backend/target
 /archive/step1/target
-
+/frontend/node_modules
 
 # Added by cargo
 #
