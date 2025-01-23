@@ -12,9 +12,9 @@ async fn main() -> std::io::Result<()> {
         App::new()
             .wrap(
                 Cors::default()
-                    .allow_any_origin()
-                    .allow_any_method()
-                    .allow_any_header(),
+                    .allowed_origin("https://badroll.ddordain.com")
+                    .allowed_methods(vec!["GET", "POST", "OPTIONS"])
+                    .allowed_headers(vec!["Content-Type", "Authorization"]),
             )
             .route("/simulate", web::post().to(simulate))
     })

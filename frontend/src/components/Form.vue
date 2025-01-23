@@ -51,7 +51,7 @@ export default {
 
     const submitForm = async () => {
       try {
-      const res = await axios.post("http://localhost:8000/simulate", formData.value, {
+      const res = await axios.post("https://api.badroll.ddordain/simulate", formData.value, {
         headers: { "Content-Type": "application/json" },
         withCredentials: false,
       });
