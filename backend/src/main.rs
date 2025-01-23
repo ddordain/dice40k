@@ -18,7 +18,7 @@ async fn main() -> std::io::Result<()> {
             )
             .route("/simulate", web::post().to(simulate))
     })
-    .bind("127.0.0.1:8000")?
+    .bind("0.0.0.0:8000")?
     .run()
     .await
 }
