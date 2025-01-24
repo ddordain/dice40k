@@ -77,7 +77,7 @@ export default {
     const response = ref(null);
 
     const apiUrl = import.meta.env.MODE === "production"
-      ? "https://api.badroll.ddordain/simulate"
+      ? "https://api.badroll.ddordain.com/simulate"
       : "http://localhost:8000/simulate"; // Use your dev URL here for local testing
 
     const submitForm = async () => {
