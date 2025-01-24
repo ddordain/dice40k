@@ -1,3 +1,4 @@
+/backend/.env
 /backend/target
 /archive/step1/target
 /frontend/node_modules
