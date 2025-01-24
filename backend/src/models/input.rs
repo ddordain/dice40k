@@ -7,4 +7,8 @@ pub struct SimulationInput {
     pub min_to_wound: u8,
     pub min_to_save: u8,
     pub threshold_percent: f64,
+    pub lethal_hit: bool,
+    pub sustained_hit: bool,
+    pub reroll_hit: bool,
+    pub reroll_wound: bool,
 }

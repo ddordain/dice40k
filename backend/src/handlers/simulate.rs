@@ -17,7 +17,7 @@ pub async fn simulate(input: web::Json<SimulationInput>) -> impl Responder {
         return HttpResponse::BadRequest().body("threshold_percent must be between 0 and 100.");
     }
 
-    let num_iterations = 10_000;
+    let num_iterations = 50_000;
 
     let (average, threshold) = monte_carlo_simulation(
         input.num_attacks,
@@ -26,6 +26,10 @@ pub async fn simulate(input: web::Json<SimulationInput>) -> impl Responder {
         input.min_to_save,
         input.threshold_percent,
         num_iterations,
+        input.lethal_hit,
+        input.sustained_hit,
+        input.reroll_hit,
+        input.reroll_wound,
     );
 
     HttpResponse::Ok().json(SimulationResult {
