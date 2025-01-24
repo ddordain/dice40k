@@ -14,7 +14,7 @@ async fn main() -> std::io::Result<()> {
 
     let bind_address = env::var("BIND_ADDRESS").unwrap_or_else(|_| "0.0.0.0:8000".to_string());
     let allowed_origin =
-        env::var("ALLOWED_ORIGIN").unwrap_or_else(|_| "http://localhost:3000".to_string());
+        env::var("ALLOWED_ORIGIN").unwrap_or_else(|_| "http://localhost:5173".to_string());
 
     HttpServer::new(move || {
         App::new()
